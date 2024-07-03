@@ -1,0 +1,27 @@
+{
+  "name": "sibmpl_theme",
+  "version": "1.0.0",
+  "description": "A clean, modern, multi-purpose theme which can be adapted and used for any website design and layout.",
+  "main": "index.js",
+  "scripts": {
+    "upload:css": "hs upload ./css/styles.css sibmpl_theme/css/styles.css",
+    "watch:upload": "nodemon --watch ./css/styles.css --exec \"npm run upload:css\"",
+    "upload:file": "node upload.js",
+    "watch:files": "chokidar \"./**/*.{html,js,json,css,jpg,png}\" -c \"node upload.js '{path}'\"",
+    "dev": "concurrently \"npm run watch:files\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^8.2.2",
+    "wait-on": "^6.0.1",
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0"
+  }
+}
